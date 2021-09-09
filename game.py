@@ -1,4 +1,5 @@
-player1= input("Please pick a marker 'X' or 'O'")
+def clear():
+    os.system( 'cls' )
 
 def display_board(board):
     print('   |   |')
@@ -16,3 +17,16 @@ def display_board(board):
 
 test_board = ['#','X','O','X','O','X','O','X','O','X']
 display_board(test_board)
+
+
+def player_input():
+    marker=""
+
+    while not (marker== "X" or marker=="O"):
+        marker = input('Player 1: Do you want to be X or O?  ')
+    if marker == "X":
+        return ('X','O')
+    else:
+        return('O','X')  
+
+player_input()              
