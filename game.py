@@ -1,5 +1,9 @@
-def clear():
-    os.system( 'cls' )
+# crear terminal def... not working
+# def clear():
+#    os.system( 'cls' )
+
+
+#creating board for display
 
 def display_board(board):
     print('   |   |')
@@ -14,10 +18,15 @@ def display_board(board):
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     print('   |   |')
 
+# small test to check if board is working 
+
 
 test_board = ['#','X','O','X','O','X','O','X','O','X']
-display_board(test_board)
+# display_board(test_board)
 
+# clear()
+
+# getting the players marker Preference
 
 def player_input():
     marker=""
@@ -29,4 +38,19 @@ def player_input():
     else:
         return('O','X')  
 
-player_input()              
+
+# checking players input
+# player_input()              
+
+
+
+#get board, marker, position. and assign to board
+
+def place_marker(board, marker, position):
+    board[position] = marker
+
+
+# test to check if place_marker() is working. test passed
+# place_marker(test_board,'$',8)
+
+#display_board(test_board)
