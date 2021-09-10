@@ -53,7 +53,7 @@ def place_marker(board, marker, position):
 
     # test to check if place_marker() is working. test passed
 
-place_marker(test_board,'X',8)
+# place_marker(test_board,'X',8)
 
 display_board(test_board)
 
@@ -91,3 +91,12 @@ def full_board_check(board):
         if space_check(board, i):
             return False
     return True
+
+
+def player_choice(board):
+    position = 0
+    
+    while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board, position):
+        position = int(input('Choose your next position: (1-9) '))
+        
+    return position    
