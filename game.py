@@ -31,8 +31,9 @@ test_board = ['#','X','O','X','O','X','O','X','O','X']
 def player_input():
     marker=""
 
+# the output = (player1 marker, Player2 marker)
     while not (marker== "X" or marker=="O"):
-        marker = input('Player 1: Do you want to be X or O?  ')
+        marker = input('Player 1: Do you want to be X or O?  ').upper()
     if marker == "X":
         return ('X','O')
     else:
