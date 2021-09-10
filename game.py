@@ -52,9 +52,10 @@ def place_marker(board, marker, position):
 
 
     # test to check if place_marker() is working. test passed
-    # place_marker(test_board,'$',8)
 
-    #display_board(test_board)
+place_marker(test_board,'X',8)
+
+display_board(test_board)
 
 def win_check(board,mark):
     
@@ -70,3 +71,23 @@ def win_check(board,mark):
 
 win_check(test_board,'X')
 
+
+import random
+
+def choose_first():
+    if random.randint(0, 1) == 0:
+        return 'Player 2'
+    else:
+        return 'Player 1'
+
+def space_check(board, position):
+    
+    return board[position] == ' '
+
+
+
+def full_board_check(board):
+    for i in range(1,10):
+        if space_check(board, i):
+            return False
+    return True
